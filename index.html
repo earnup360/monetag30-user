@@ -80,7 +80,7 @@
             </div>
             <div>
                 <h2 id="header-name" class="font-bold text-sm text-gray-800 flex items-center gap-1">Loading... <i class="fas fa-check-circle text-blue-500 text-[10px]"></i></h2>
-                <p class="text-xs text-green-600 font-bold"><span id="header-balance">0</span> Points</p>
+                <p class="text-xs text-green-600 font-bold">৳ <span id="header-balance">0.00</span></p>
             </div>
         </div>
         <div class="bg-green-50 text-green-600 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-green-200">
@@ -95,7 +95,7 @@
         <section id="page-home" class="page-section active">
             <div class="bg-dark-green text-white rounded-3xl p-6 shadow-lg mb-6 relative overflow-hidden">
                 <p class="text-[10px] tracking-wider text-gray-300 mb-1" id="app-title-display">CURRENT PROFIT WALLET</p>
-                <h1 class="text-4xl font-extrabold text-yellow-400 mb-6"><span id="home-balance">0</span> <span class="text-xl">Pts</span></h1>
+                <h1 class="text-4xl font-extrabold text-yellow-400 mb-6">৳ <span id="home-balance">0.00</span></h1>
                 
                 <div class="flex bg-white/10 rounded-xl p-3 backdrop-blur-sm border border-white/10">
                     <div class="flex-1 border-r border-white/20 text-center">
@@ -158,13 +158,13 @@
         <section id="page-earn" class="page-section">
             <div class="bg-dark-green text-white rounded-3xl p-6 shadow-lg mb-4 text-center">
                 <h2 class="text-xl font-bold text-yellow-400 mb-1">ADS REWARD CENTER</h2>
-                <p class="text-xs text-gray-200">Watch short video ads to earn points</p>
+                <p class="text-xs text-gray-200">Watch short video ads to earn TK</p>
             </div>
             <div class="grid grid-cols-2 gap-4 mb-4">
                 <div class="bg-white p-5 rounded-2xl shadow-sm text-center border-b-4 border-green-500">
                     <i class="fa-solid fa-bolt text-green-500 text-2xl mb-2"></i>
-                    <p class="text-[10px] text-gray-400 font-bold mb-1">POINTS/AD</p>
-                    <p class="text-xl font-bold text-gray-800"><span id="earn-reward-amt">--</span> Pts</p>
+                    <p class="text-[10px] text-gray-400 font-bold mb-1">REWARD/AD</p>
+                    <p class="text-xl font-bold text-gray-800">৳ <span id="earn-reward-amt">0.00</span></p>
                 </div>
                 <div class="bg-white p-5 rounded-2xl shadow-sm text-center border-b-4 border-yellow-400">
                     <i class="fa-solid fa-clock-rotate-left text-yellow-500 text-2xl mb-2"></i>
@@ -185,11 +185,10 @@
                     <i class="fa-brands fa-telegram"></i>
                 </div>
                 <h2 class="text-xl font-bold text-yellow-400 mb-1">Bonus Rewards</h2>
-                <p class="text-xs text-gray-200">Join our community channels to earn bonus points.</p>
+                <p class="text-xs text-gray-200">Join our community channels to earn bonus TK.</p>
             </div>
             
             <div id="bonus-list-container" class="flex flex-col gap-3">
-                <!-- Bonus Items loaded dynamically here -->
                 <div class="text-center py-5 text-gray-400 text-sm font-bold">
                     <i class="fa-solid fa-spinner fa-spin text-xl mb-2"></i><br>Loading...
                 </div>
@@ -201,14 +200,13 @@
             <div class="bg-dark-green text-white rounded-3xl p-6 shadow-lg mb-4 text-center relative">
                 <i class="fa-solid fa-building-columns text-4xl text-yellow-400 mb-2"></i>
                 <h2 class="text-xl font-bold text-yellow-400">Account Activation</h2>
-                <p class="text-[10px] text-gray-200 mt-1">Activate account or buy points</p>
+                <p class="text-[10px] text-gray-200 mt-1">Activate account and add balance</p>
             </div>
 
             <div class="bg-white p-5 rounded-2xl shadow-sm mb-4">
                 <label class="text-[10px] font-bold text-gray-500 mb-2 block tracking-wide">1. SELECT PAYMENT METHOD</label>
                 <select id="depositMethodSelect" class="w-full bg-gray-50 rounded-xl p-3.5 border border-gray-100 mb-4 text-sm font-bold text-gray-700 outline-none focus:border-green-500" onchange="updateDepositDetailsUI()">
                     <option value="">Choose Gateway...</option>
-                    <!-- Options loaded by JS -->
                 </select>
 
                 <div id="deposit-number-box" style="display: none;" class="bg-[#f0fdf4] border border-green-200 p-4 rounded-xl mb-4">
@@ -240,7 +238,7 @@
             <div class="bg-dark-green text-white rounded-3xl p-6 shadow-lg mb-4 text-center">
                 <i class="fa-solid fa-gift text-5xl text-yellow-400 mb-3 drop-shadow-md"></i>
                 <h2 class="text-2xl font-bold text-yellow-400 mb-1">Refer & Earn</h2>
-                <p class="text-xs text-gray-200">Earn <span id="refer-bonus-amt" class="font-bold text-yellow-400">0</span> Pts for each friend!</p>
+                <p class="text-xs text-gray-200">Earn ৳ <span id="refer-bonus-amt" class="font-bold text-yellow-400">0.00</span> for each friend!</p>
             </div>
             <div class="grid grid-cols-2 gap-4 mb-4">
                 <div class="bg-white py-5 px-2 rounded-2xl shadow-sm text-center border-b-4 border-green-500">
@@ -248,7 +246,7 @@
                     <p class="text-[10px] text-gray-500 font-bold mt-1">TOTAL NETWORK</p>
                 </div>
                 <div class="bg-white py-5 px-2 rounded-2xl shadow-sm text-center border-b-4 border-yellow-400">
-                    <p class="text-2xl font-bold text-gray-800" id="refer-earned-total">0</p>
+                    <p class="text-2xl font-bold text-gray-800">৳ <span id="refer-earned-total">0.00</span></p>
                     <p class="text-[10px] text-gray-500 font-bold mt-1">TOTAL EARNED</p>
                 </div>
             </div>
@@ -266,8 +264,6 @@
 
         <!-- 6. WALLET (WITHDRAW) PAGE -->
         <section id="page-wallet" class="page-section">
-            
-            <!-- Blocked/Inactive Notice -->
             <div id="withdraw-lock-screen" class="bg-white p-8 rounded-3xl shadow-sm text-center mb-4 border border-red-100" style="display: none;">
                 <div class="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4"><i class="fas fa-lock"></i></div>
                 <h2 class="text-xl font-bold text-gray-800 mb-2">Withdrawal Locked</h2>
@@ -278,25 +274,23 @@
             <div id="withdraw-active-screen">
                 <div class="bg-dark-green text-white rounded-3xl p-6 shadow-lg mb-4 text-center relative">
                     <p class="text-[10px] tracking-wider text-gray-300 mb-2">WITHDRAWABLE BALANCE</p>
-                    <h1 class="text-4xl font-extrabold text-yellow-400 mb-2"><span id="wallet-balance-big">0</span> Pts</h1>
+                    <h1 class="text-4xl font-extrabold text-yellow-400 mb-2">৳ <span id="wallet-balance-big">0.00</span></h1>
                 </div>
                 
                 <div class="bg-[#fff9e6] border border-[#fde68a] p-4 rounded-2xl mb-5 flex gap-3 text-yellow-700 text-xs font-medium leading-relaxed shadow-sm">
                     <i class="fa-solid fa-circle-info mt-0.5 text-yellow-500 text-sm"></i>
-                    <p id="withdraw-notice">Minimum withdrawal is <span id="withdraw-min-pts">0</span> Points.</p>
+                    <p id="withdraw-notice">Minimum withdrawal is <span id="withdraw-min-pts">0.00</span> TK.</p>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl shadow-sm mb-4">
-                    <label class="text-[10px] font-bold text-gray-500 mb-2 block tracking-wide">WITHDRAW POINTS</label>
+                    <label class="text-[10px] font-bold text-gray-500 mb-2 block tracking-wide">WITHDRAW AMOUNT</label>
                     <div class="flex items-center bg-gray-50 rounded-xl p-3.5 border border-gray-100 mb-4 focus-within:border-green-500 transition">
                         <i class="fa-solid fa-coins text-yellow-500 mr-3"></i>
-                        <input type="number" id="withdrawAmountInput" placeholder="Enter points" class="bg-transparent flex-1 outline-none font-bold text-gray-800 text-sm">
+                        <input type="number" id="withdrawAmountInput" placeholder="Enter amount (TK)" class="bg-transparent flex-1 outline-none font-bold text-gray-800 text-sm">
                     </div>
 
                     <label class="text-[10px] font-bold text-gray-500 mb-2 block tracking-wide">PAYMENT METHOD</label>
-                    <select id="withdrawMethodSelect" class="w-full bg-gray-50 rounded-xl p-3.5 border border-gray-100 mb-4 text-sm font-bold text-gray-700 outline-none focus:border-green-500">
-                        <!-- Options loaded by JS -->
-                    </select>
+                    <select id="withdrawMethodSelect" class="w-full bg-gray-50 rounded-xl p-3.5 border border-gray-100 mb-4 text-sm font-bold text-gray-700 outline-none focus:border-green-500"></select>
 
                     <label class="text-[10px] font-bold text-gray-500 mb-2 block tracking-wide">ACCOUNT NUMBER</label>
                     <div class="flex items-center bg-gray-50 rounded-xl p-3.5 border border-gray-100 mb-5 focus-within:border-green-500 transition">
@@ -330,7 +324,7 @@
             <div class="grid grid-cols-2 gap-4 mb-5">
                 <div class="bg-white py-4 px-3 rounded-2xl shadow-sm border-b-4 border-green-500 flex flex-col gap-1">
                     <p class="text-[10px] text-gray-400 font-bold">CURRENT BALANCE</p>
-                    <p class="text-lg font-bold text-green-600"><span id="profile-main-bal">0</span> Pts</p>
+                    <p class="text-lg font-bold text-green-600">৳ <span id="profile-main-bal">0.00</span></p>
                 </div>
                 <div class="bg-white py-4 px-3 rounded-2xl shadow-sm border-b-4 border-gray-800 flex flex-col gap-1">
                     <p class="text-[10px] text-gray-400 font-bold">TOTAL ADS WATCHED</p>
@@ -379,6 +373,9 @@
 
     <!-- ================= JAVASCRIPT & FIREBASE LOGIC ================= -->
     <script>
+        // --- গুরুত্বপূর্ণ: এখানে আপনার বটের ইউজারনেম দিন (যেমন: Task_Network_bot) ---
+        const BOT_USERNAME = "AdPulse_Zone_bot"; 
+        
         // 1. Firebase Configuration
         const firebaseConfig = {
   apiKey: "AIzaSyBY59pCik8WXs1WArUlvFIoFHSD_MXcvKs",
@@ -392,25 +389,21 @@
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        // Global Variables
         let settings = {
             appName: "Task Networks",
             adsPerDayLimit: 1000,
-            pointsPerAd: 100,
-            minWithdrawPoints: 1000,
-            minReferralsRequired: 5,
-            refBonusReferrer: 300,
-            refBonusReferee: 100,
+            pointsPerAd: 0.5,
+            minWithdrawPoints: 10,
+            refBonusReferrer: 2.5,
+            refBonusReferee: 1.0,
             officialChannel: "https://t.me/+blEJMKPpQ2phN2M1",
             supportGroup: "https://t.me/earning36p",
-            monetagId: "10052375", 
-            referralBotLink: "https://t.me/Task_Network_bot"
+            monetagId: "10052375"
         };
         
         let currentUser = null;
         let userId = null;
 
-        // Toast Helper
         function showToast(message, duration = 3000) {
             const toast = document.getElementById('toast');
             toast.textContent = message;
@@ -418,7 +411,6 @@
             setTimeout(() => { toast.classList.remove('show'); }, duration);
         }
 
-        // Initialize App
         document.addEventListener('DOMContentLoaded', () => {
             const tg = window.Telegram.WebApp;
             tg.expand();
@@ -432,27 +424,22 @@
 
         function generateId() { return 'user_' + Math.random().toString(36).substr(2, 9); }
 
-        // ================= FETCH SETTINGS =================
         function fetchSettings() {
             database.ref('settings').on('value', (snap) => {
                 if (snap.exists()) {
                     settings = { ...settings, ...snap.val() };
-                    
                     document.getElementById('app-title-display').textContent = (settings.appName || "APP").toUpperCase();
                     
-                    // Withdraw Methods Dropdown
                     const wMethods = settings.paymentMethods || ["Bkash", "Nagad"];
                     const wSelect = document.getElementById('withdrawMethodSelect');
                     wSelect.innerHTML = '<option value="">Select Method</option>';
                     wMethods.forEach(m => wSelect.innerHTML += `<option value="${m}">${m}</option>`);
 
-                    // Deposit Methods Dropdown
                     const dMethods = settings.depositMethodList || [];
                     const dSelect = document.getElementById('depositMethodSelect');
                     dSelect.innerHTML = '<option value="">Choose Gateway...</option>';
                     dMethods.forEach((m, idx) => dSelect.innerHTML += `<option value="${idx}">${m.name}</option>`);
 
-                    // Monetag SDK Load
                     if (!window.adScriptLoaded && settings.monetagId) {
                         var s = document.createElement('script');
                         s.src = 'https://libtl.com/sdk.js';
@@ -469,23 +456,19 @@
             });
         }
 
-        // ================= LOAD USER =================
         function loadUserState() {
             database.ref('users/' + userId).on('value', (snap) => {
                 if (snap.exists()) {
                     currentUser = snap.val();
-
                     if (currentUser.isBlocked === true) {
                         document.getElementById('blocked-screen').style.display = 'flex';
                         document.getElementById('support-link').href = settings.supportGroup;
                         return; 
                     }
-
                     checkDailyReset();
                 } else {
                     createNewUser();
                 }
-
                 updateUI();
                 checkUrlReferral();
             });
@@ -502,7 +485,6 @@
                 totalAdsWatchedLifetime: 0,
                 lastAdWatchDate: new Date().toLocaleDateString(),
                 claimedBonuses: [],
-                referralCode: Math.random().toString(36).substring(2, 10).toUpperCase(),
                 referredBy: null,
                 referredUsers: [],
                 isActivated: false
@@ -523,24 +505,20 @@
             }
         }
 
-        // ================= UPDATE UI =================
         function updateUI() {
             if (!currentUser || currentUser.isBlocked) return;
 
-            // Headers & Common
             document.getElementById('header-name').innerHTML = `${currentUser.name} <i class="fas fa-check-circle text-blue-500 text-[10px]"></i>`;
             document.getElementById('profile-name-big').innerText = currentUser.name;
             document.getElementById('header-avatar').src = currentUser.photoUrl;
             document.getElementById('profile-avatar').src = currentUser.photoUrl;
 
-            // Balances & Points
-            const pts = currentUser.points || 0;
-            document.getElementById('header-balance').innerText = pts;
-            document.getElementById('home-balance').innerText = pts;
-            document.getElementById('wallet-balance-big').innerText = pts;
-            document.getElementById('profile-main-bal').innerText = pts;
+            const tkBalance = parseFloat(currentUser.points || 0).toFixed(2);
+            document.getElementById('header-balance').innerText = tkBalance;
+            document.getElementById('home-balance').innerText = tkBalance;
+            document.getElementById('wallet-balance-big').innerText = tkBalance;
+            document.getElementById('profile-main-bal').innerText = tkBalance;
 
-            // Home / Profile Stats
             const refCount = currentUser.referredUsers ? currentUser.referredUsers.length : 0;
             document.getElementById('home-total-ads').innerText = currentUser.totalAdsWatchedLifetime || 0;
             document.getElementById('home-network').innerText = refCount;
@@ -548,25 +526,24 @@
             document.getElementById('profile-today-ads').innerText = currentUser.adsWatchedToday || 0;
             document.getElementById('profile-ref-count').innerText = `${refCount} Ref`;
 
-            // Daily Limits & Mission
             document.getElementById('mission-target').innerText = settings.adsPerDayLimit;
             document.getElementById('mission-completed').innerText = currentUser.adsWatchedToday || 0;
             document.getElementById('earn-viewed-today').innerText = currentUser.adsWatchedToday || 0;
             document.getElementById('earn-limit-today').innerText = settings.adsPerDayLimit;
             document.getElementById('earn-ads-left').innerText = Math.max(0, settings.adsPerDayLimit - (currentUser.adsWatchedToday || 0));
-            document.getElementById('earn-reward-amt').innerText = settings.pointsPerAd;
+            document.getElementById('earn-reward-amt').innerText = parseFloat(settings.pointsPerAd || 0).toFixed(2);
 
             let progress = ((currentUser.adsWatchedToday || 0) / settings.adsPerDayLimit) * 100;
             document.getElementById('mission-bar').style.width = `${Math.min(progress, 100)}%`;
 
-            // Referral
-            document.getElementById('referral-link').value = `${settings.referralBotLink}?start=${currentUser.referralCode}`;
-            document.getElementById('refer-bonus-amt').innerText = settings.refBonusReferrer;
+            // অটোমেটিক রেফারেল লিংক তৈরি (এখানে ইউজারের নিজস্ব টেলিগ্রাম আইডি ব্যবহার হচ্ছে)
+            const refBonus = parseFloat(settings.refBonusReferrer || 0);
+            document.getElementById('referral-link').value = `https://t.me/${BOT_USERNAME}?start=${userId}`;
+            document.getElementById('refer-bonus-amt').innerText = refBonus.toFixed(2);
             document.getElementById('refer-total').innerText = refCount;
-            document.getElementById('refer-earned-total').innerText = refCount * settings.refBonusReferrer;
+            document.getElementById('refer-earned-total').innerText = (refCount * refBonus).toFixed(2);
 
-            // Withdraw / Activated Check
-            document.getElementById('withdraw-min-pts').innerText = settings.minWithdrawPoints;
+            document.getElementById('withdraw-min-pts').innerText = parseFloat(settings.minWithdrawPoints || 0).toFixed(2);
             if(!currentUser.isActivated) {
                 document.getElementById('withdraw-active-screen').style.display = 'none';
                 document.getElementById('withdraw-lock-screen').style.display = 'block';
@@ -585,16 +562,13 @@
             }
         }
 
-        // ================= BONUS LIST LOGIC =================
         function renderBonusList() {
             const bonusItems = settings.bonusList || [];
             const container = document.getElementById('bonus-list-container');
-            
             if (bonusItems.length === 0) {
                 container.innerHTML = '<p class="text-center text-sm font-bold text-gray-400 py-4">No bonus available right now.</p>';
                 return;
             }
-
             let html = '';
             bonusItems.forEach(item => {
                 const isClaimed = currentUser?.claimedBonuses?.includes(item.id);
@@ -602,13 +576,14 @@
                     ? `<span class="bg-gray-200 text-gray-500 text-[10px] font-bold px-4 py-1.5 rounded">CLAIMED</span>`
                     : `<button onclick="handleBonusClick(event, '${item.id}', ${item.reward}, '${item.link}')" class="bg-[#0088cc] text-white text-[10px] font-bold px-4 py-1.5 rounded w-16 shadow-sm active:scale-95">JOIN</button>`;
                 
+                const tkReward = parseFloat(item.reward || 0).toFixed(2);
                 html += `
                 <div class="bg-white p-4 rounded-2xl shadow-sm flex items-center justify-between mb-3">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-lg"><i class="${item.icon || 'fas fa-link'}"></i></div>
                         <div>
                             <p class="font-bold text-sm text-gray-800">${item.name}</p>
-                            <p class="text-[10px] font-bold text-yellow-500 mt-0.5">+${item.reward} Points</p>
+                            <p class="text-[10px] font-bold text-yellow-500 mt-0.5">+৳ ${tkReward}</p>
                         </div>
                     </div>
                     ${btnHTML}
@@ -619,51 +594,36 @@
 
         function handleBonusClick(e, id, reward, link) {
             if (currentUser.claimedBonuses?.includes(id)) return;
-            
-            // Open link
-            if (window.Telegram && window.Telegram.WebApp) { window.Telegram.WebApp.openLink(link); } 
-            else { window.open(link, '_blank'); }
-
-            // Reward after delay
+            if (window.Telegram && window.Telegram.WebApp) { window.Telegram.WebApp.openLink(link); } else { window.open(link, '_blank'); }
             setTimeout(() => {
                 if (!currentUser.claimedBonuses) currentUser.claimedBonuses = [];
                 currentUser.claimedBonuses.push(id);
-                currentUser.points += reward;
+                currentUser.points += parseFloat(reward || 0);
                 saveUserState();
-                showToast("Bonus points added!");
-                renderBonusList(); // update ui
+                showToast(`Bonus ৳${parseFloat(reward).toFixed(2)} added!`);
+                renderBonusList();
             }, 5000);
         }
 
-        // ================= AD WATCH LOGIC =================
         let adWatchedSuccessfully = false;
-        
         function handleWatchDailyAd() {
-            if (currentUser.adsWatchedToday >= settings.adsPerDayLimit) {
-                return showToast("Daily limit reached! Come back tomorrow.");
-            }
-            if(!settings.monetagId) {
-                return showToast("Ads not ready. Try again later.");
-            }
+            if (currentUser.adsWatchedToday >= settings.adsPerDayLimit) return showToast("Daily limit reached! Come back tomorrow.");
+            if(!settings.monetagId) return showToast("Ads not ready. Try again later.");
 
             adWatchedSuccessfully = false;
             document.getElementById('ad-overlay').style.display = 'flex';
             document.getElementById('ad-close-btn').classList.add('hidden');
-            
             let timeLeft = 15;
             document.getElementById('timer-text').innerText = timeLeft;
 
             try {
                 const adFunctionName = 'show_' + settings.monetagId;
-                if (typeof window[adFunctionName] === "function") {
-                    window[adFunctionName]();
-                }
+                if (typeof window[adFunctionName] === "function") window[adFunctionName]();
             } catch (e) { console.error("Ad Error:", e); }
 
             const interval = setInterval(() => {
                 timeLeft--;
                 document.getElementById('timer-text').innerText = timeLeft;
-
                 if(timeLeft <= 0) {
                     clearInterval(interval);
                     adWatchedSuccessfully = true;
@@ -676,22 +636,21 @@
         function closeAdModalAndReward() {
             document.getElementById('ad-overlay').style.display = 'none';
             if (adWatchedSuccessfully) {
-                currentUser.points += settings.pointsPerAd;
+                const reward = parseFloat(settings.pointsPerAd || 0);
+                currentUser.points += reward;
                 currentUser.adsWatchedToday++;
                 currentUser.totalAdsWatchedLifetime++;
                 saveUserState();
-                showToast(`+${settings.pointsPerAd} Points earned!`);
+                showToast(`+৳${reward.toFixed(2)} earned!`);
             }
         }
 
-        // ================= DEPOSIT LOGIC =================
         function updateDepositDetailsUI() {
             const select = document.getElementById('depositMethodSelect');
             const box = document.getElementById('deposit-number-box');
             const targetInput = document.getElementById('targetDepositNumber');
             const label = document.getElementById('deposit-method-label');
             const hint = document.getElementById('deposit-method-hint');
-
             const depMethods = settings.depositMethodList || [];
             const idx = select.value;
 
@@ -708,65 +667,40 @@
 
         function submitDepositRequest() {
             const select = document.getElementById('depositMethodSelect');
-            const amount = parseInt(document.getElementById('depositAmountInput').value);
+            const amount = parseFloat(document.getElementById('depositAmountInput').value);
             const sender = document.getElementById('depositSenderInput').value.trim();
             const trx = document.getElementById('depositTrxInput').value.trim();
-
             const depMethods = settings.depositMethodList || [];
             const idx = select.value;
 
-            if (idx === "" || isNaN(amount) || !sender || !trx) {
-                return showToast("Please fill all details correctly.");
-            }
-
+            if (idx === "" || isNaN(amount) || !sender || !trx) return showToast("Please fill all details correctly.");
             const m = depMethods[idx];
-            if (amount < (m.minAmount || 0)) {
-                return showToast(`Minimum deposit is ${m.minAmount} TK.`);
-            }
+            if (amount < parseFloat(m.minAmount || 0)) return showToast(`Minimum deposit is ${m.minAmount} TK.`);
 
             const request = {
-                userId: userId,
-                name: currentUser.name,
-                method: m.name,
-                amount: amount,
-                senderNumber: sender,
-                transactionId: trx,
-                status: "Pending",
-                date: new Date().toLocaleString()
+                userId: userId, name: currentUser.name, method: m.name, amount: amount,
+                senderNumber: sender, transactionId: trx, status: "Pending", date: new Date().toLocaleString()
             };
 
             database.ref('deposits').push(request).then(() => {
-                showToast("Request sent! Points will be added upon approval.");
+                showToast("Request sent! TK will be added upon approval.");
                 switchTab('home');
             });
         }
 
-        // ================= WITHDRAW LOGIC =================
         function handleSubmitWithdrawal() {
-            const amount = parseInt(document.getElementById('withdrawAmountInput').value);
+            const amount = parseFloat(document.getElementById('withdrawAmountInput').value);
             const method = document.getElementById('withdrawMethodSelect').value;
             const account = document.getElementById('withdrawAccountInput').value.trim();
-            
-            const minPts = settings.minWithdrawPoints || 0;
+            const minPts = parseFloat(settings.minWithdrawPoints || 0);
 
-            if (isNaN(amount) || amount < minPts) {
-                return showToast(`Minimum withdraw is ${minPts} Points.`);
-            }
-            if (amount > currentUser.points) {
-                return showToast("Insufficient balance.");
-            }
-            if (!method || !account) {
-                return showToast("Fill all inputs correctly.");
-            }
+            if (isNaN(amount) || amount < minPts) return showToast(`Minimum withdraw is ${minPts.toFixed(2)} TK.`);
+            if (amount > parseFloat(currentUser.points || 0)) return showToast("Insufficient balance.");
+            if (!method || !account) return showToast("Fill all inputs correctly.");
 
             const request = {
-                userId: userId,
-                name: currentUser.name,
-                amount: amount,
-                method: method,
-                account: account,
-                status: "Pending",
-                date: new Date().toLocaleString()
+                userId: userId, name: currentUser.name, amount: amount, method: method, account: account,
+                status: "Pending", date: new Date().toLocaleString()
             };
 
             database.ref('withdrawals').push(request).then(() => {
@@ -778,45 +712,46 @@
             });
         }
 
-        // ================= REFERRAL LOGIC =================
+        // --- অটোমেটিক রেফারেল বোনাস অ্যাড করার ফাংশন ---
         function checkUrlReferral() {
+            // টেলিগ্রাম ওয়েবসাইটের URL অথবা start_param থেকে রেফারার আইডি খুঁজে বের করা
             const urlParams = new URLSearchParams(window.location.search);
-            const refCodeFromUrl = urlParams.get('start');
+            const refCodeFromUrl = window.Telegram.WebApp.initDataUnsafe.start_param || urlParams.get('start');
 
-            if (refCodeFromUrl && !currentUser.referredBy && refCodeFromUrl !== currentUser.referralCode) {
-                database.ref('users').orderByChild('referralCode').equalTo(refCodeFromUrl).once('value', (snapshot) => {
+            // যদি লিংক দিয়ে ঢুকে থাকে, এবং আইডিটি নিজের না হয়, এবং সে আগে থেকে কারো রেফারে জয়েন না করে থাকে
+            if (refCodeFromUrl && !currentUser.referredBy && String(refCodeFromUrl) !== String(userId)) {
+                
+                // ডেটাবেস থেকে চেক করা যে এই রেফারার আইডিটি আসলেই আছে কি না
+                database.ref('users/' + refCodeFromUrl).once('value', (snapshot) => {
                     if (snapshot.exists()) {
-                        const referrerId = Object.keys(snapshot.val())[0];
-                        const referrerData = snapshot.val()[referrerId];
+                        const referrerData = snapshot.val();
 
+                        // নতুন ইউজারের বোনাস সেট করা (যিনি জয়েন করেছেন)
                         currentUser.referredBy = refCodeFromUrl;
-                        currentUser.points += (settings.refBonusReferee || 100);
+                        currentUser.points += parseFloat(settings.refBonusReferee || 0);
 
+                        // যিনি রেফার করেছেন (Referrer) তার প্রোফাইলে নতুন ইউজারের আইডি এবং ব্যালেন্স যোগ করা
                         const updatedReferredUsers = referrerData.referredUsers || [];
                         updatedReferredUsers.push(userId);
 
-                        database.ref('users/' + referrerId).update({
-                            points: referrerData.points + (settings.refBonusReferrer || 300),
+                        database.ref('users/' + refCodeFromUrl).update({
+                            points: parseFloat(referrerData.points || 0) + parseFloat(settings.refBonusReferrer || 0),
                             referredUsers: updatedReferredUsers
                         });
 
                         saveUserState();
-                        showToast("Referral Bonus Added!");
+                        showToast("Welcome! Referral Bonus Added.");
                     }
                 });
             }
         }
 
-        // ================= UTILS & NAVIGATION =================
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
             document.getElementById('page-' + tabId).classList.add('active');
-            
-            // Bottom Nav update (Deposit is not in bottom nav, handle gracefully)
             document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
             const navItem = document.querySelector(`.nav-item[data-tab="${tabId}"]`);
             if(navItem) navItem.classList.add('active');
-            
             window.scrollTo(0, 0);
         }
 
@@ -829,18 +764,15 @@
 
         function shareReferralLink() {
             const link = document.getElementById('referral-link').value;
-            const text = `Join Task Networks and earn points!`;
+            const text = `Join Task Networks and start earning cash!`;
             if (window.Telegram && window.Telegram.WebApp) {
                 window.Telegram.WebApp.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(text)}`);
             }
         }
 
         function openOfficialChannel() {
-            if (window.Telegram && window.Telegram.WebApp) {
-                window.Telegram.WebApp.openLink(settings.supportGroup);
-            } else {
-                window.open(settings.supportGroup, '_blank');
-            }
+            if (window.Telegram && window.Telegram.WebApp) { window.Telegram.WebApp.openLink(settings.supportGroup); } 
+            else { window.open(settings.supportGroup, '_blank'); }
         }
 
     </script>
